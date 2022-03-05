@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todoey_flutter/screens/tasks_screen.dart';
 
 void main() {
   runApp(const TodoeyApp());
@@ -14,27 +15,7 @@ class TodoeyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        backgroundColor: Colors.lightBlueAccent,
-        appBar: AppBar(
-          backgroundColor: Colors.lightBlueAccent,
-          title: Text('Todoey'),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              CircleAvatar(
-                backgroundColor: Colors.white,
-                radius: 30.0,
-                child: Icon(
-                  Icons.watch,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      home: TasksScreen(),
     );
   }
 }
