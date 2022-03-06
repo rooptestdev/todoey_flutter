@@ -30,6 +30,9 @@ class AddTaskScreen extends StatelessWidget {
             TextField(
               autofocus: true,
               textAlign: TextAlign.center,
+              onChanged: (value) {
+                print(value);
+              },
             ),
             SizedBox(
               height: 10.0,
