@@ -7,7 +7,7 @@ class AddTaskScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String? newTaskTitle;
+    String newTaskTitle = '';
     return Container(
       color: const Color(0xff757575),
       child: Container(
@@ -48,7 +48,8 @@ class AddTaskScreen extends StatelessWidget {
               ),
               onPressed: () {
                 //print(newTaskTitle);
-                Provider.of<TaskProvider>(context).addTask(newTaskTitle!);
+                Provider.of<TaskProvider>(context, listen: false)
+                    .addTask(newTaskTitle);
                 Navigator.pop(context);
               },
               child: const Text('Add'),
